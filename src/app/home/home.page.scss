@@ -1,27 +1,46 @@
 #container {
-  text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  text-align: center;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+#container h3 {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+#container ion-button.buttonclass {
+  margin: 10px auto;
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 25px; /* make it round */
+  background-color: black;
+  color: black; /* set text color to black */
 }
 
-#container a {
-  text-decoration: none;
+#container ion-button.buttonclass:hover {
+  background-color: plum; /* change color on hover */
+  color: darkplum; /* set text color to dark plum */
+}
+
+#container ion-button.buttonclass:active {
+  background-color: highlight; /* change color on click */
+}
+
+#container ion-button.buttonclass.selected {
+  background-color: #000;
+  color: white; /* set text color to white */
+}
+
+#container ion-button.buttonclass.selected:hover {
+  background-color: #333; /* change color on hover */
+}
+
+#container ion-button.buttonclass.selected:active {
+  background-color: #1a1a1a; /* change color on click */
 }

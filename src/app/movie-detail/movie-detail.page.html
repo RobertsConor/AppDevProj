@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ movie.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="movie.poster_path" [alt]="movie.title" />
+
+    <ion-card-header>
+      <ion-card-subtitle>{{ movie.release_date }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{ movie.overview }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

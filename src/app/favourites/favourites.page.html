@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let movie of likedMovies">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ movie.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }} poster">
+            <p>{{ movie.overview }}</p>
+            <p>Release Date: {{ movie.release_date }}</p>
+            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+              <ion-fab-button color="danger" (click)="removeFromFavourites(movie)">
+                <ion-icon name="trash"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+          </ion-card-content>
+         
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

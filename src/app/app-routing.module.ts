@@ -11,6 +11,27 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'trending',
+    loadChildren: () => import('./trending/trending.module').then( m => m.TrendingPageModule)
+  },
+  {
+    path: 'upcoming',
+    loadChildren: () => import('./upcoming/upcoming.module').then( m => m.UpcomingPageModule)
+  },
+  {
+    path: 'upcoming',
+    loadChildren: () => import('./upcoming/upcoming.module').then( m => m.UpcomingPageModule)
+  },
+  {
+    path: 'movie-detail',
+    loadChildren: () => import('./movie-detail/movie-detail.module').then( m => m.MovieDetailPageModule)
+  },
+  {
+    path: 'favourites',
+    loadChildren: () => import('./favourites/favourites.module').then( m => m.FavouritesPageModule)
+  },
+ 
 ];
 
 @NgModule({

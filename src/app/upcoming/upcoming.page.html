@@ -1,0 +1,25 @@
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Upcoming Movies</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="movie-grid">
+      <div class="movie-card" *ngFor="let movie of movies">
+        <ion-card>
+          <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }} poster">
+          <ion-card-content>
+            <ion-card-title>{{ movie.title }}</ion-card-title>
+            <p class="movie-details">{{ movie.overview }}</p>
+            <ion-button fill="clear" color="light" (click)="addToFavourites(movie)" class="favorite-button">
+              <ion-icon class="star" name="star"></ion-icon>
+            </ion-button>          
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </ion-content>

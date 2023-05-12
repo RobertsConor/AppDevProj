@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title style="text-align: center;">
+      Movies
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,11 +9,15 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large" style="text-align: center;">Movies</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
- <h3>Welcome to Mobile Apps Starter project 2023</h3>
+
+    <ion-button shape="round" class="buttonclass" (click)="goToUpcomingPage()">Upcoming</ion-button>
+    <ion-button shape="round" class="buttonclass" (click)="goToTrendingPage()">Trending</ion-button>
+    <ion-button shape="round" class="buttonclass" (click)="goToThisYearPage()">Cinema</ion-button>
+    <ion-button shape="round" class="buttonclass" (click)="goToFavouritesPage()">Favourites</ion-button>
   </div>
 </ion-content>
